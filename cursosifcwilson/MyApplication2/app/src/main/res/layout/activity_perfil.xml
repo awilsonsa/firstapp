@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".PerfilActivity">
+
+    <TextView
+        android:id="@+id/txtNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insira seu nome:" />
+
+    <EditText
+        android:id="@+id/editNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNome"
+        android:layout_marginTop="8dp"
+        android:hint="Digite seu nome" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editNome"
+        android:layout_marginTop="16dp"
+        android:text="Digite seu email:" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEmail"
+        android:layout_marginTop="8dp"
+        android:inputType="textEmailAddress"
+        android:hint="Digite seu email" />
+
+    <TextView
+        android:id="@+id/txtCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editEmail"
+        android:layout_marginTop="16dp"
+        android:text="Escolha um curso:" />
+
+    <Spinner
+        android:id="@+id/spinnerCursos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCurso"
+        android:layout_marginTop="8dp"
+        android:entries="@array/cursos" />
+
+    <Button
+        android:id="@+id/btnVerResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerCursos"
+        android:layout_marginTop="16dp"
+        android:text="Ver Resultado"
+        android:onClick="verResultado" />
+
+</RelativeLayout>
